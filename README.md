@@ -68,6 +68,15 @@ AI-employee/
 
 ※ 実際の構成は今後の実装に応じて変更される可能性があります。
 
+## AI によるスライド生成 — 既知の注意事項
+
+詳細は [`docs/slide-notes.md`](docs/slide-notes.md) を参照してください。
+
+| # | 注意点 | 正しい対応 |
+|---|--------|-----------|
+| 1 | Google API 認証済みの場合は `.pptx` ではなく Google Slides API で直接作成する | `google-api-python-client` を使用 |
+| 2 | pptxgenjs でカスタムレイアウトを定義するとアスペクト比が崩れる | `LAYOUT_16x9` 組み込み値を使用（10 × 5.625 インチ） |
+
 ## ライセンス
 
 このプロジェクトは [MIT License](LICENSE) のもとで公開されています。
